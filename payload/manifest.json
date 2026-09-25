@@ -1,0 +1,685 @@
+{
+  "format": 1,
+  "product": "BurningTertium",
+  "version": "1.0.0",
+  "steamAppId": "1361210",
+  "steamBuild": "24735202",
+  "exeVersion": "1.3.770.210",
+  "files": [
+    {
+      "id": "hologram",
+      "target": "bundle/data/ba/bacd9b3be2a4c57f",
+      "base": "bundle/data/ba/bacd9b3be2a4c57f",
+      "baseSize": 114360,
+      "baseSha256": "e0d63444385473b9b4e299318cd3fdc85e2188f9df9da06ab2224a41654cb616",
+      "outputSize": 133912,
+      "outputSha256": "5d1fcc93ee8e9e951ab874ddd1298751cb6c157b528090652cfdfcd3d0850250",
+      "payload": "inserts/hologram.bin",
+      "payloadSize": 38389,
+      "payloadSha256": "beb023b0d089d8aa9c4c158df4fc40d1acf52dbfe35cd836ad97caf8acac8943",
+      "addition": false,
+      "operations": [
+        {
+          "kind": "Insert",
+          "offset": 0,
+          "count": 352
+        },
+        {
+          "kind": "Copy",
+          "offset": 352,
+          "count": 15580
+        },
+        {
+          "kind": "Insert",
+          "offset": 352,
+          "count": 1177
+        },
+        {
+          "kind": "Copy",
+          "offset": 71568,
+          "count": 564
+        },
+        {
+          "kind": "Insert",
+          "offset": 1529,
+          "count": 637
+        },
+        {
+          "kind": "Copy",
+          "offset": 17216,
+          "count": 565
+        },
+        {
+          "kind": "Insert",
+          "offset": 2166,
+          "count": 109
+        },
+        {
+          "kind": "Copy",
+          "offset": 73168,
+          "count": 485
+        },
+        {
+          "kind": "Insert",
+          "offset": 2275,
+          "count": 1763
+        },
+        {
+          "kind": "Copy",
+          "offset": 19808,
+          "count": 274
+        },
+        {
+          "kind": "Insert",
+          "offset": 4038,
+          "count": 4207
+        },
+        {
+          "kind": "Copy",
+          "offset": 71600,
+          "count": 532
+        },
+        {
+          "kind": "Insert",
+          "offset": 8245,
+          "count": 680
+        },
+        {
+          "kind": "Copy",
+          "offset": 72544,
+          "count": 279
+        },
+        {
+          "kind": "Insert",
+          "offset": 8925,
+          "count": 10379
+        },
+        {
+          "kind": "Copy",
+          "offset": 27808,
+          "count": 43413
+        },
+        {
+          "kind": "Insert",
+          "offset": 19304,
+          "count": 1177
+        },
+        {
+          "kind": "Copy",
+          "offset": 71568,
+          "count": 564
+        },
+        {
+          "kind": "Insert",
+          "offset": 20481,
+          "count": 637
+        },
+        {
+          "kind": "Copy",
+          "offset": 17216,
+          "count": 565
+        },
+        {
+          "kind": "Insert",
+          "offset": 21118,
+          "count": 109
+        },
+        {
+          "kind": "Copy",
+          "offset": 73168,
+          "count": 485
+        },
+        {
+          "kind": "Insert",
+          "offset": 21227,
+          "count": 1763
+        },
+        {
+          "kind": "Copy",
+          "offset": 19808,
+          "count": 274
+        },
+        {
+          "kind": "Insert",
+          "offset": 22990,
+          "count": 4207
+        },
+        {
+          "kind": "Copy",
+          "offset": 71600,
+          "count": 532
+        },
+        {
+          "kind": "Insert",
+          "offset": 27197,
+          "count": 680
+        },
+        {
+          "kind": "Copy",
+          "offset": 72544,
+          "count": 279
+        },
+        {
+          "kind": "Insert",
+          "offset": 27877,
+          "count": 10370
+        },
+        {
+          "kind": "Copy",
+          "offset": 83088,
+          "count": 31132
+        },
+        {
+          "kind": "Insert",
+          "offset": 38247,
+          "count": 142
+        }
+      ]
+    },
+    {
+      "id": "hologram-bottom",
+      "target": "bundle/data/51/51f7e0e66641669b",
+      "base": "bundle/data/51/51f7e0e66641669b",
+      "baseSize": 84848,
+      "baseSha256": "078ed294f4bab50fa984a035d9c94da4e5521da858c148cc52316f5fcfe448e8",
+      "outputSize": 84848,
+      "outputSha256": "3250e754ac19c8f8a8b24c4194e13e1c9eb607d86254d1a933423d1935e83351",
+      "payload": "inserts/hologram-bottom.bin",
+      "payloadSize": 128,
+      "payloadSha256": "1a1c52447b8f1f24bf46d2d29f09893e0addb1257d52d005d73aeacc8c533af1",
+      "addition": false,
+      "operations": [
+        {
+          "kind": "Insert",
+          "offset": 0,
+          "count": 128
+        },
+        {
+          "kind": "Copy",
+          "offset": 128,
+          "count": 84720
+        }
+      ]
+    },
+    {
+      "id": "hologram-grid",
+      "target": "bundle/data/59/59c4260bff372016",
+      "base": "bundle/data/59/59c4260bff372016",
+      "baseSize": 217128,
+      "baseSha256": "c49cba30643a8c863c2818df51bbf5f761f7dc0cd32c4912b3d51d037e655db4",
+      "outputSize": 275960,
+      "outputSha256": "eed51d396ea8f0a13c151d303b79e4f4ccc6dab82051a2172c23deaad84ae4d7",
+      "payload": "inserts/hologram-grid.bin",
+      "payloadSize": 135836,
+      "payloadSha256": "b5703f9a180fc949f07a4556fc82fb00dc466d75f7fd3401226cb830b12c1bc8",
+      "addition": false,
+      "operations": [
+        {
+          "kind": "Insert",
+          "offset": 0,
+          "count": 224
+        },
+        {
+          "kind": "Copy",
+          "offset": 224,
+          "count": 16167
+        },
+        {
+          "kind": "Insert",
+          "offset": 224,
+          "count": 2531
+        },
+        {
+          "kind": "Copy",
+          "offset": 17728,
+          "count": 316
+        },
+        {
+          "kind": "Insert",
+          "offset": 2755,
+          "count": 6808
+        },
+        {
+          "kind": "Copy",
+          "offset": 209760,
+          "count": 264
+        },
+        {
+          "kind": "Insert",
+          "offset": 9563,
+          "count": 1952
+        },
+        {
+          "kind": "Copy",
+          "offset": 105344,
+          "count": 277
+        },
+        {
+          "kind": "Insert",
+          "offset": 11515,
+          "count": 6599
+        },
+        {
+          "kind": "Copy",
+          "offset": 209760,
+          "count": 264
+        },
+        {
+          "kind": "Insert",
+          "offset": 18114,
+          "count": 7508
+        },
+        {
+          "kind": "Copy",
+          "offset": 31088,
+          "count": 7273
+        },
+        {
+          "kind": "Insert",
+          "offset": 25622,
+          "count": 1824
+        },
+        {
+          "kind": "Copy",
+          "offset": 124896,
+          "count": 337
+        },
+        {
+          "kind": "Insert",
+          "offset": 27446,
+          "count": 1146
+        },
+        {
+          "kind": "Copy",
+          "offset": 125840,
+          "count": 332
+        },
+        {
+          "kind": "Insert",
+          "offset": 28592,
+          "count": 153
+        },
+        {
+          "kind": "Copy",
+          "offset": 126320,
+          "count": 342
+        },
+        {
+          "kind": "Insert",
+          "offset": 28745,
+          "count": 2006
+        },
+        {
+          "kind": "Copy",
+          "offset": 42464,
+          "count": 286
+        },
+        {
+          "kind": "Insert",
+          "offset": 30751,
+          "count": 4588
+        },
+        {
+          "kind": "Copy",
+          "offset": 45728,
+          "count": 299
+        },
+        {
+          "kind": "Insert",
+          "offset": 35339,
+          "count": 74
+        },
+        {
+          "kind": "Copy",
+          "offset": 209760,
+          "count": 264
+        },
+        {
+          "kind": "Insert",
+          "offset": 35413,
+          "count": 973
+        },
+        {
+          "kind": "Copy",
+          "offset": 124896,
+          "count": 337
+        },
+        {
+          "kind": "Insert",
+          "offset": 36386,
+          "count": 1188
+        },
+        {
+          "kind": "Copy",
+          "offset": 39984,
+          "count": 291
+        },
+        {
+          "kind": "Insert",
+          "offset": 37574,
+          "count": 7567
+        },
+        {
+          "kind": "Copy",
+          "offset": 209760,
+          "count": 264
+        },
+        {
+          "kind": "Insert",
+          "offset": 45141,
+          "count": 13758
+        },
+        {
+          "kind": "Copy",
+          "offset": 56304,
+          "count": 314
+        },
+        {
+          "kind": "Insert",
+          "offset": 58899,
+          "count": 9136
+        },
+        {
+          "kind": "Copy",
+          "offset": 66240,
+          "count": 37731
+        },
+        {
+          "kind": "Insert",
+          "offset": 68035,
+          "count": 2531
+        },
+        {
+          "kind": "Copy",
+          "offset": 17728,
+          "count": 316
+        },
+        {
+          "kind": "Insert",
+          "offset": 70566,
+          "count": 6808
+        },
+        {
+          "kind": "Copy",
+          "offset": 209760,
+          "count": 264
+        },
+        {
+          "kind": "Insert",
+          "offset": 77374,
+          "count": 1952
+        },
+        {
+          "kind": "Copy",
+          "offset": 105344,
+          "count": 277
+        },
+        {
+          "kind": "Insert",
+          "offset": 79326,
+          "count": 6599
+        },
+        {
+          "kind": "Copy",
+          "offset": 209760,
+          "count": 264
+        },
+        {
+          "kind": "Insert",
+          "offset": 85925,
+          "count": 7496
+        },
+        {
+          "kind": "Copy",
+          "offset": 118656,
+          "count": 5599
+        },
+        {
+          "kind": "Insert",
+          "offset": 93421,
+          "count": 1824
+        },
+        {
+          "kind": "Copy",
+          "offset": 124896,
+          "count": 337
+        },
+        {
+          "kind": "Insert",
+          "offset": 95245,
+          "count": 1146
+        },
+        {
+          "kind": "Copy",
+          "offset": 125840,
+          "count": 332
+        },
+        {
+          "kind": "Insert",
+          "offset": 96391,
+          "count": 153
+        },
+        {
+          "kind": "Copy",
+          "offset": 126320,
+          "count": 342
+        },
+        {
+          "kind": "Insert",
+          "offset": 96544,
+          "count": 2006
+        },
+        {
+          "kind": "Copy",
+          "offset": 42464,
+          "count": 286
+        },
+        {
+          "kind": "Insert",
+          "offset": 98550,
+          "count": 4588
+        },
+        {
+          "kind": "Copy",
+          "offset": 45728,
+          "count": 299
+        },
+        {
+          "kind": "Insert",
+          "offset": 103138,
+          "count": 74
+        },
+        {
+          "kind": "Copy",
+          "offset": 209760,
+          "count": 264
+        },
+        {
+          "kind": "Insert",
+          "offset": 103212,
+          "count": 973
+        },
+        {
+          "kind": "Copy",
+          "offset": 124896,
+          "count": 337
+        },
+        {
+          "kind": "Insert",
+          "offset": 104185,
+          "count": 1188
+        },
+        {
+          "kind": "Copy",
+          "offset": 39984,
+          "count": 291
+        },
+        {
+          "kind": "Insert",
+          "offset": 105373,
+          "count": 7567
+        },
+        {
+          "kind": "Copy",
+          "offset": 209760,
+          "count": 264
+        },
+        {
+          "kind": "Insert",
+          "offset": 112940,
+          "count": 13758
+        },
+        {
+          "kind": "Copy",
+          "offset": 56304,
+          "count": 314
+        },
+        {
+          "kind": "Insert",
+          "offset": 126698,
+          "count": 9130
+        },
+        {
+          "kind": "Copy",
+          "offset": 152128,
+          "count": 39340
+        },
+        {
+          "kind": "Insert",
+          "offset": 135828,
+          "count": 8
+        },
+        {
+          "kind": "Copy",
+          "offset": 191488,
+          "count": 25640
+        }
+      ]
+    },
+    {
+      "id": "hologram-side",
+      "target": "bundle/data/97/97b5490a85966a77",
+      "base": "bundle/data/97/97b5490a85966a77",
+      "baseSize": 133988,
+      "baseSha256": "28a94fa9b2a988d8dd93925c40e4687091b6e766f57d1c283eab9fddbaa03a03",
+      "outputSize": 133988,
+      "outputSha256": "6541de8e29cda29a996d7580020468df6360794187017f824c9418b20cd8df21",
+      "payload": "inserts/hologram-side.bin",
+      "payloadSize": 192,
+      "payloadSha256": "04d152a5b96893877b8ae2dd5a7385fc3143e2a720c98941602c3ea6c9311de7",
+      "addition": false,
+      "operations": [
+        {
+          "kind": "Insert",
+          "offset": 0,
+          "count": 192
+        },
+        {
+          "kind": "Copy",
+          "offset": 192,
+          "count": 133796
+        }
+      ]
+    },
+    {
+      "id": "mod-BurningTertium-lua",
+      "target": "mods/BurningTertium/scripts/mods/BurningTertium/BurningTertium.lua",
+      "base": null,
+      "baseSize": 0,
+      "baseSha256": null,
+      "outputSize": 6840,
+      "outputSha256": "74ef767780fe54a745c778ed0d0b39fcc49bc064cb55905891c5ae53407e0ab5",
+      "payload": "inserts/mod-BurningTertium-lua.bin",
+      "payloadSize": 6840,
+      "payloadSha256": "74ef767780fe54a745c778ed0d0b39fcc49bc064cb55905891c5ae53407e0ab5",
+      "addition": true,
+      "operations": [
+        {
+          "kind": "Insert",
+          "offset": 0,
+          "count": 6840
+        }
+      ]
+    },
+    {
+      "id": "mod-BurningTertium-mod",
+      "target": "mods/BurningTertium/BurningTertium.mod",
+      "base": null,
+      "baseSize": 0,
+      "baseSha256": null,
+      "outputSize": 466,
+      "outputSha256": "cc1081eddf46aa6bee60dabf0654c4124fc97e860ff860d18e01669bf794dd24",
+      "payload": "inserts/mod-BurningTertium-mod.bin",
+      "payloadSize": 466,
+      "payloadSha256": "cc1081eddf46aa6bee60dabf0654c4124fc97e860ff860d18e01669bf794dd24",
+      "addition": true,
+      "operations": [
+        {
+          "kind": "Insert",
+          "offset": 0,
+          "count": 466
+        }
+      ]
+    },
+    {
+      "id": "mod-BurningTertium_data-lua",
+      "target": "mods/BurningTertium/scripts/mods/BurningTertium/BurningTertium_data.lua",
+      "base": null,
+      "baseSize": 0,
+      "baseSha256": null,
+      "outputSize": 196,
+      "outputSha256": "cbd3cfa2d6080d13cfb0e37abdb6c9a2c2b7b6a792a4c9dd4c2fbdf950462b17",
+      "payload": "inserts/mod-BurningTertium_data-lua.bin",
+      "payloadSize": 196,
+      "payloadSha256": "cbd3cfa2d6080d13cfb0e37abdb6c9a2c2b7b6a792a4c9dd4c2fbdf950462b17",
+      "addition": true,
+      "operations": [
+        {
+          "kind": "Insert",
+          "offset": 0,
+          "count": 196
+        }
+      ]
+    },
+    {
+      "id": "mod-BurningTertium_localization-lua",
+      "target": "mods/BurningTertium/scripts/mods/BurningTertium/BurningTertium_localization.lua",
+      "base": null,
+      "baseSize": 0,
+      "baseSha256": null,
+      "outputSize": 215,
+      "outputSha256": "c5472e491e35e110562a4747483514ee42fcb3895e2dab5810f9333bf4cd6674",
+      "payload": "inserts/mod-BurningTertium_localization-lua.bin",
+      "payloadSize": 215,
+      "payloadSha256": "c5472e491e35e110562a4747483514ee42fcb3895e2dab5810f9333bf4cd6674",
+      "addition": true,
+      "operations": [
+        {
+          "kind": "Insert",
+          "offset": 0,
+          "count": 215
+        }
+      ]
+    },
+    {
+      "id": "mod-roof_positions-lua",
+      "target": "mods/BurningTertium/scripts/mods/BurningTertium/roof_positions.lua",
+      "base": null,
+      "baseSize": 0,
+      "baseSha256": null,
+      "outputSize": 7303,
+      "outputSha256": "efa3ab3f9a848d323c48bc3492dc75949c0d1b920d76bcb1ce5790e0309ce81e",
+      "payload": "inserts/mod-roof_positions-lua.bin",
+      "payloadSize": 7303,
+      "payloadSha256": "efa3ab3f9a848d323c48bc3492dc75949c0d1b920d76bcb1ce5790e0309ce81e",
+      "addition": true,
+      "operations": [
+        {
+          "kind": "Insert",
+          "offset": 0,
+          "count": 7303
+        }
+      ]
+    }
+  ]
+}

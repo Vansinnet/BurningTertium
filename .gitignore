@@ -1,2 +1,27 @@
-analysis/
-resource/__pycache__/
+# Extracted stock assets, backups and offline research inputs are never published.
+/analysis/
+
+# Build and release outputs
+/installer/**/bin/
+/installer/**/obj/
+/artifacts/
+/releases/
+*.zip
+*.7z
+*.pdb
+*.luac
+*.log
+*.tmp
+*.bak
+
+# Local tooling
+.vs/
+.idea/
+.vscode/
+**/__pycache__/
+*.pyc
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini

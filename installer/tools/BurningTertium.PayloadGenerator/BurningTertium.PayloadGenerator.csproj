@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType></PropertyGroup>
+  <ItemGroup><ProjectReference Include="..\..\BurningTertium.Installer.Core\BurningTertium.Installer.Core.csproj" /></ItemGroup>
+</Project>

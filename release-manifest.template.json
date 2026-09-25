@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "releaseVersion": "1.0.0",
+  "supportedGameBuild": {
+    "buildId": "24735202",
+    "executableVersion": "1.3.770.210"
+  },
+  "payload": [
+    "BurningTertium.mod",
+    "scripts/mods/BurningTertium/BurningTertium.lua",
+    "scripts/mods/BurningTertium/BurningTertium_data.lua",
+    "scripts/mods/BurningTertium/BurningTertium_localization.lua",
+    "scripts/mods/BurningTertium/roof_positions.lua"
+  ]
+}

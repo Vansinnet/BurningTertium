@@ -1,5 +1,41 @@
 # BurningTertium: Mourningstar table investigation
 
+## Release 1.0.0 packaging — 2026-09-25
+
+**Status.** The user confirmed the re-lit `fire` mode works ("fungerar fint").
+Release scope: the four red hologram materials plus the Lua mod with stock
+fire/smoke modes only. The candle hub-bundle variant, the large-flame and
+procedural-fire candle streams (`author_fire_*`, `fire_dsl.py`, `fire_model.py`,
+`local_fire_flame_trial.py`; offline only, never installed) are superseded and
+**not** part of the release; the `candle` mode was removed from the Lua because
+its effect exists only with the 124 MB modified hub bundle.
+
+**Why an installer at all.** Runtime material variables cannot fix the colour:
+the green light gain and base gradient are hardcoded in pixel program
+`1d465925213c`, and a safe runtime handle to the level's hologram unit was
+never established (the broad unit scan crashed). The fire itself needs no
+game-file change.
+
+**Installer.** `installer/` is a port of the RainbowFlame 1.2.0 installer
+(journals, backups, Repair after update, load-order line). The payload generator
+builds COPY/INSERT recipes from the pinned stock backups in
+`analysis/local-red-trial-20260923T203209Z-d11ff686/` and the tested outputs
+`5d1fcc93…` (hologram), `6541de8e…` (side), `3250e754…` (bottom), `eed51d39…`
+(grid); inserts total about 174 KB and contain no complete stock file.
+Validation in this sandbox (.NET 10.0.401 on Linux, `EnableWindowsTargeting`):
+build without warnings; 22/23 installer tests pass — the Windows reparse-point
+fixture cannot be created on Linux; a real-payload end-to-end run on a fixture
+game root made of the stock material bytes installed all nine files with the
+expected hashes, repaired, uninstalled back to the exact stock bytes and removed
+only its own load-order line. The WinForms UI and a real game install are not
+tested.
+
+**Local machine.** The development trials are still installed on the author's
+PC and are not installer-owned. `resource/restore_local_trials.py --check` /
+`--restore` undoes them in the required order (Lua revisions → Lua deployment →
+hologram shader → four materials → large flame → candle hub bundle) before the
+installer can be run there.
+
 ## Real fire instead of candle billboards — 2026-09-24 (late)
 
 User confirmed after the shader trial: the city is clearly red and "super
