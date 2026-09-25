@@ -126,10 +126,18 @@ def restore(path):
     backup = folder / "mod_load_order.original"
     if sha(backup) != manifest["load_order_original_sha256"]:
         raise ValueError("Original load order backup drift")
-    current_order = sha(LOAD_ORDER)
+    current_bytes = LOAD_ORDER.read_bytes()
+    current_order = hashlib.sha256(current_bytes).hexdigest()
+    original_bytes = backup.read_bytes()
     if current_order not in (manifest["load_order_original_sha256"],
                              manifest["load_order_installed_sha256"]):
-        raise ValueError("Mod load order changed outside this trial; refusing rollback")
+        lines = current_bytes.splitlines(keepends=True)
+        owned = [line for line in lines if line.rstrip(b"\r\n") == b"BurningTertium"]
+        if len(owned) != 1 or b"BurningTertium" in original_bytes.splitlines():
+            raise ValueError("Mod load order changed outside this trial; cannot isolate owned line")
+        restored_order = b"".join(line for line in lines if line.rstrip(b"\r\n") != b"BurningTertium")
+    else:
+        restored_order = original_bytes
     if TARGET.exists():
         actual = {path.relative_to(TARGET).as_posix() for path in TARGET.rglob("*") if path.is_file()}
         if actual - owned_files or any(path.is_symlink() for path in TARGET.rglob("*")):
@@ -138,8 +146,8 @@ def restore(path):
             deployed = TARGET / row["relative"]
             if deployed.is_file() and sha(deployed) != row["source_sha256"]:
                 raise ValueError("Deployed mod file changed outside this trial")
-    if current_order != manifest["load_order_original_sha256"]:
-        put_order(backup.read_bytes())
+    if current_bytes != restored_order:
+        put_order(restored_order)
     if TARGET.exists():
         for row in manifest["files"]:
             deployed = TARGET / row["relative"]
@@ -151,8 +159,8 @@ def restore(path):
         TARGET.rmdir()
     manifest["status"] = "restored"
     record_state(folder, manifest)
-    if sha(LOAD_ORDER) != manifest["load_order_original_sha256"]:
-        raise ValueError("Original load order was not restored")
+    if sha(LOAD_ORDER) != hashlib.sha256(restored_order).hexdigest():
+        raise ValueError("Load order was not restored")
 
 
 def verify(path):

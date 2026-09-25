@@ -2,7 +2,14 @@
 
 All notable release-facing changes to BurningTertium are documented here.
 
-## [1.0.0] - Unreleased
+## [1.0.1] - 2026-09-25
+
+### Fixed
+
+- Installer window keeps its action buttons accessible at larger text and display scales.
+- Local trial rollback preserves later Vortex load-order changes and recognizes fully restored stock files.
+
+## [1.0.0] - 2026-09-25
 
 ### Added
 

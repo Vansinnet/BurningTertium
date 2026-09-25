@@ -5,7 +5,7 @@ namespace BurningTertium.Installer;
 public sealed class MainForm : Form
 {
     private readonly TextBox folder = new() { Dock = DockStyle.Fill };
-    private readonly Label status = new() { AutoSize = false, Dock = DockStyle.Fill, TextAlign = ContentAlignment.MiddleLeft };
+    private readonly Label status = new() { AutoSize = true, Dock = DockStyle.Fill, TextAlign = ContentAlignment.MiddleLeft };
     private readonly Button install = new() { Text = "Install", AutoSize = true };
     private readonly Button repair = new() { Text = "Repair", AutoSize = true };
     private readonly Button repairAfterUpdate = new() { Text = "Repair after update", AutoSize = true };
@@ -16,8 +16,9 @@ public sealed class MainForm : Form
     public MainForm()
     {
         Text = "BurningTertium Installer";
-        MinimumSize = new Size(680, 280);
-        Size = new Size(760, 320);
+        MinimumSize = new Size(760, 420);
+        Size = new Size(800, 460);
+        AutoScroll = true;
         StartPosition = FormStartPosition.CenterScreen;
         Font = new Font("Segoe UI", 10);
         var payload = FindPayload();
@@ -38,12 +39,12 @@ public sealed class MainForm : Form
         picker.Controls.Add(folder, 0, 0); picker.Controls.Add(browse, 1, 0);
         var actions = new FlowLayoutPanel { Dock = DockStyle.Top, AutoSize = true };
         actions.Controls.AddRange(new Control[] { install, repair, repairAfterUpdate, uninstall });
-        var layout = new TableLayoutPanel { Dock = DockStyle.Fill, Padding = new Padding(24), RowCount = 6, ColumnCount = 1 };
+        var layout = new TableLayoutPanel { Dock = DockStyle.Top, AutoSize = true, Padding = new Padding(24), RowCount = 5, ColumnCount = 1 };
         layout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
         layout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
         layout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
         layout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-        layout.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
+        layout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
         layout.Controls.Add(heading); layout.Controls.Add(description); layout.Controls.Add(picker); layout.Controls.Add(actions); layout.Controls.Add(status);
         Controls.Add(layout);
 

@@ -45,10 +45,10 @@ def single(manifest_path, backup_name):
     return info, target, backup
 
 
-def restore_single(manifest_path, backup_name, apply):
+def restore_single(manifest_path, backup_name, apply, final_sha=None):
     info, target, backup = single(manifest_path, backup_name)
     current = sha(target)
-    if current == info["before"]:
+    if current == info["before"] or current == final_sha:
         return "already restored"
     if current != info["after"]:
         raise ValueError("Unknown bytes at " + str(target))
@@ -62,6 +62,8 @@ def restore_single(manifest_path, backup_name, apply):
 def plan(apply):
     game_closed()
     steps = []
+    manifest = json.loads(RED.read_text(encoding="utf-8"))
+    hologram_stock = next(row["original_sha256"] for row in manifest["files"] if row["label"] == "hologram")
     if LUA.exists():
         current = sha(LUA)
         if current not in LUA_KNOWN:
@@ -79,13 +81,17 @@ def plan(apply):
         steps.append("remove Lua deployment")
         if apply:
             lua_deploy.restore(DEPLOY)
-    steps.append("hologram shader: " + restore_single(SHADER, "hologram.previous", apply))
-    manifest = json.loads(RED.read_text(encoding="utf-8"))
+    steps.append("hologram shader: " + restore_single(SHADER, "hologram.previous", apply, hologram_stock))
     if any(sha(Path(row["target"])) != row["original_sha256"] for row in manifest["files"]):
         steps.append("restore four stock hologram materials")
         if apply:
             red.restore(RED)
-    steps.append("large flame: " + restore_single(LARGE, "red_flame.previous", apply))
+    large = json.loads(LARGE.read_text(encoding="utf-8"))
+    candle_state = json.loads(CANDLE.read_text(encoding="utf-8"))
+    if candle_state["status"] == "restored" and large["target"] == candle_state["added_stream"] and not Path(large["target"]).exists():
+        steps.append("large flame: already restored")
+    else:
+        steps.append("large flame: " + restore_single(LARGE, "red_flame.previous", apply))
     if sha(candle.BUNDLE) != candle.ORIGINAL_SHA or candle.ADDITION.exists():
         steps.append("restore stock hub bundle and remove owned stream")
         if apply:
