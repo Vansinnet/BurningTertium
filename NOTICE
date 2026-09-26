@@ -8,10 +8,11 @@ The Darktide Mod Framework (DMF) and Darktide Mod Loader (DML) are third-party
 community projects owned by their respective authors and contributors. Their
 licenses and terms apply separately.
 
-The standalone mod uses Asset Redirect v2 (asset_redirect.lua and
-asset-redirect.dll) from Wobin's Polychromatic 1.0.1 project:
-https://github.com/Wobin/Polychromatic . These components remain the work of
-their respective authors and are not covered by BurningTertium's license.
+The standalone mod uses Reforge (`scripts/mods/BurningTertium/reforge.lua`
+and `bin/reforge.dll`), MIT-licensed, https://github.com/Vansinnet/Reforge ;
+`bin/reforge.dll` includes MinHook (BSD-2-Clause). Their licences are in
+`bin/REFORGE_NOTICES.txt`, which must be distributed with the DLL. Reforge is
+not covered by BurningTertium's license.
 
 Vansinnet and BurningTertium are not affiliated with, endorsed by, sponsored by,
 or approved by Fatshark, Games Workshop, DMF, or DML.

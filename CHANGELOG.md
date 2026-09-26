@@ -2,6 +2,16 @@
 
 All notable release-facing changes to BurningTertium are documented here.
 
+## [1.2.0] - 2026-09-26
+
+### Changed
+
+- Serve the four red hologram materials through Reforge, an open-source asset
+  redirect (https://github.com/Vansinnet/Reforge), instead of
+  Polychromatic's closed-source Asset Redirect v2 DLL. The materials and Lua behavior are
+  unchanged.
+- `/reforge` lists the replaced materials and their state.
+
 ## [1.1.1] - 2026-09-26
 
 ### Changed
