@@ -2,6 +2,14 @@
 
 All notable release-facing changes to BurningTertium are documented here.
 
+## [1.1.1] - 2026-09-26
+
+### Changed
+
+- Update the bundled Asset Redirect DLL to the version shipped with
+  Polychromatic 1.0.1. The mod's Lua behavior and four red hologram materials
+  are unchanged.
+
 ## [1.1.0] - 2026-09-26
 
 ### Changed

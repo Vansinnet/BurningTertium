@@ -9,7 +9,7 @@ community projects owned by their respective authors and contributors. Their
 licenses and terms apply separately.
 
 The standalone mod uses Asset Redirect v2 (asset_redirect.lua and
-asset-redirect.dll) from Wobin's Polychromatic project:
+asset-redirect.dll) from Wobin's Polychromatic 1.0.1 project:
 https://github.com/Wobin/Polychromatic . These components remain the work of
 their respective authors and are not covered by BurningTertium's license.
 

@@ -26,19 +26,22 @@ networking are untouched.
 
 ## Installation
 
-1. Download `BurningTertium.zip` from the latest GitHub release. Extract it
-   into the game's `mods` directory, so you have
+1. Download `BurningTertium.zip` from the latest
+   [GitHub release](https://github.com/Vansinnet/BurningTertium/releases).
+   Extract it into the game's `mods` directory, so you have
    `mods/BurningTertium/BurningTertium.mod`. Keep the entire `BurningTertium`
    folder together, including `bin/`, `payload/` and `scripts/`.
 2. Add `BurningTertium` to `mods/mod_load_order.txt`, or install and enable the
    ZIP with your mod manager. Start Darktide and visit the Mourningstar mission
    table. No separate installer or .NET runtime is needed.
 
-The redirect library checks each original material's SHA-256 before serving a
-replacement. The standalone mod does not change files under `bundle/`. The
-four full replacement materials and the Asset Redirect v2 library/DLL are
-included in the ZIP. Use `/asset_redirect` and the log to check redirect status.
-If a material reports `restart_required`, restart the game.
+The mod includes the Asset Redirect v2 Lua library and DLL from
+**Polychromatic 1.0.1**; Polychromatic itself is not required. On startup it
+registers the four hologram materials and checks each original material's
+SHA-256 before serving its replacement. It does not change files under
+`bundle/`. If a material is unavailable or its original has changed, that
+material remains stock. Use `/asset_redirect` and the log to check status;
+restart Darktide if a material reports `restart_required`.
 
 ### In-game commands
 
@@ -55,9 +58,10 @@ If a material reports `restart_required`, restart the game.
 If upgrading from an installer-based 1.0.x release, close the game and run
 that release's **Uninstall** first to restore its four original game files.
 Then install this ZIP as above. Back up any settings you want to keep before
-using the old uninstaller. For future updates, replace the
-`mods/BurningTertium` folder. To uninstall this version, remove its folder
-and its load-order entry.
+using the old uninstaller. To update from standalone version 1.1.0, replace
+the entire `mods/BurningTertium` folder so the new DLL is included. To
+uninstall this version, remove its folder and its load-order entry.
+
 After a game update, the redirect library skips any material whose stock hash
 has changed; an updated mod is needed to restore that part of the red hologram.
 If a separate development trial changed the four `bundle/data` files, restore
