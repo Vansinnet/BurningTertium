@@ -1,4 +1,0 @@
-return {
-    mod_name = { en = "Burning Tertium" },
-    mod_description = { en = "Sets the Mourningstar mission-table Tertium hologram on fire. Commands: /bt_flames fire|fire2|fire3|smoke [1-20], off, status." },
-}

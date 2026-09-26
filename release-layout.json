@@ -1,96 +1,29 @@
 {
   "schemaVersion": 1,
-  "profile": "installer",
+  "profile": "direct",
   "package": {
     "payload": [
-      {
-        "source": "BurningTertium.mod",
-        "destination": "BurningTertium/BurningTertium.mod"
-      },
-      {
-        "source": "scripts/mods/BurningTertium/BurningTertium.lua",
-        "destination": "BurningTertium/scripts/mods/BurningTertium/BurningTertium.lua"
-      },
-      {
-        "source": "scripts/mods/BurningTertium/BurningTertium_data.lua",
-        "destination": "BurningTertium/scripts/mods/BurningTertium/BurningTertium_data.lua"
-      },
-      {
-        "source": "scripts/mods/BurningTertium/BurningTertium_localization.lua",
-        "destination": "BurningTertium/scripts/mods/BurningTertium/BurningTertium_localization.lua"
-      },
-      {
-        "source": "scripts/mods/BurningTertium/roof_positions.lua",
-        "destination": "BurningTertium/scripts/mods/BurningTertium/roof_positions.lua"
-      },
-      {
-        "source": "payload/manifest.json",
-        "destination": "payload/manifest.json"
-      },
-      {
-        "source": "payload/inserts",
-        "destination": "payload/inserts"
-      }
+      { "source": "BurningTertium.mod", "destination": "BurningTertium/BurningTertium.mod" },
+      { "source": "info.json", "destination": "BurningTertium/info.json" },
+      { "source": "bin/asset-redirect.dll", "destination": "BurningTertium/bin/asset-redirect.dll" },
+      { "source": "payload/redirect/bacd9b3be2a4c57f.btmat", "destination": "BurningTertium/payload/redirect/bacd9b3be2a4c57f.btmat" },
+      { "source": "payload/redirect/97b5490a85966a77.btmat", "destination": "BurningTertium/payload/redirect/97b5490a85966a77.btmat" },
+      { "source": "payload/redirect/51f7e0e66641669b.btmat", "destination": "BurningTertium/payload/redirect/51f7e0e66641669b.btmat" },
+      { "source": "payload/redirect/59c4260bff372016.btmat", "destination": "BurningTertium/payload/redirect/59c4260bff372016.btmat" },
+      { "source": "scripts/mods/BurningTertium/asset_redirect.lua", "destination": "BurningTertium/scripts/mods/BurningTertium/asset_redirect.lua" },
+      { "source": "scripts/mods/BurningTertium/redirects.lua", "destination": "BurningTertium/scripts/mods/BurningTertium/redirects.lua" },
+      { "source": "scripts/mods/BurningTertium/BurningTertium.lua", "destination": "BurningTertium/scripts/mods/BurningTertium/BurningTertium.lua" },
+      { "source": "scripts/mods/BurningTertium/BurningTertium_data.lua", "destination": "BurningTertium/scripts/mods/BurningTertium/BurningTertium_data.lua" },
+      { "source": "scripts/mods/BurningTertium/BurningTertium_localization.lua", "destination": "BurningTertium/scripts/mods/BurningTertium/BurningTertium_localization.lua" },
+      { "source": "scripts/mods/BurningTertium/roof_positions.lua", "destination": "BurningTertium/scripts/mods/BurningTertium/roof_positions.lua" }
     ],
     "documentation": [
-      {
-        "source": "README.md",
-        "destination": "README.md"
-      },
-      {
-        "source": "CHANGELOG.md",
-        "destination": "CHANGELOG.md"
-      }
+      { "source": "README.md", "destination": "BurningTertium/README.md" },
+      { "source": "CHANGELOG.md", "destination": "BurningTertium/CHANGELOG.md" },
+      { "source": "NOTICE", "destination": "BurningTertium/NOTICE" }
     ],
     "licenses": [
-      {
-        "source": "LICENSE",
-        "destination": "LICENSE"
-      },
-      {
-        "source": "NOTICE",
-        "destination": "NOTICE"
-      }
-    ]
-  },
-  "installer": {
-    "project": "installer/BurningTertium.Installer/BurningTertium.Installer.csproj",
-    "buildInputs": [
-      "installer/Directory.Build.props",
-      "installer/BurningTertium.Installer/BurningTertium.Installer.csproj",
-      "installer/BurningTertium.Installer/Program.cs",
-      "installer/BurningTertium.Installer/MainForm.cs",
-      "installer/BurningTertium.Installer/app.manifest",
-      "installer/BurningTertium.Installer.Core/BurningTertium.Installer.Core.csproj",
-      "installer/BurningTertium.Installer.Core/Delta.cs",
-      "installer/BurningTertium.Installer.Core/Discovery.cs",
-      "installer/BurningTertium.Installer.Core/InstallerEngine.cs",
-      "installer/BurningTertium.Installer.Core/LoadOrder.cs",
-      "installer/BurningTertium.Installer.Core/Model.cs",
-      "installer/BurningTertium.Installer.Core/Safety.cs"
-    ],
-    "configuration": "Release",
-    "outputFiles": [
-      {
-        "source": "BurningTertium.Installer.exe",
-        "destination": "BurningTertium.Installer.exe"
-      },
-      {
-        "source": "BurningTertium.Installer.dll",
-        "destination": "BurningTertium.Installer.dll"
-      },
-      {
-        "source": "BurningTertium.Installer.Core.dll",
-        "destination": "BurningTertium.Installer.Core.dll"
-      },
-      {
-        "source": "BurningTertium.Installer.deps.json",
-        "destination": "BurningTertium.Installer.deps.json"
-      },
-      {
-        "source": "BurningTertium.Installer.runtimeconfig.json",
-        "destination": "BurningTertium.Installer.runtimeconfig.json"
-      }
+      { "source": "LICENSE", "destination": "BurningTertium/LICENSE" }
     ]
   }
 }

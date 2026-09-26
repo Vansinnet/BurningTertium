@@ -1,5 +1,12 @@
 # Extracted stock assets, backups and offline research inputs are never published.
 /analysis/
+/resource/
+/installer/
+/RESEARCH.md
+/release-manifest.template.json
+/direct-layout.json
+/payload/inserts/
+/payload/manifest.json
 
 # Build and release outputs
 /installer/**/bin/

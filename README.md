@@ -8,7 +8,7 @@ networking are untouched.
 
 ## What is changed
 
-- **Red hologram:** four hologram material files are replaced: the city,
+- **Red hologram:** four hologram material streams are redirected: the city,
   sides, base and grid. The city shader's own hardcoded green light and green
   base gradient are mirrored to red, so no green remains. Transparency,
   scanlines and city detail are preserved.
@@ -20,26 +20,25 @@ networking are untouched.
 ## Requirements
 
 - Darktide Mod Loader (DML) and Darktide Mod Framework (DMF).
-- Darktide Steam build `24735202`, executable `1.3.770.210`, Windows x64.
-- Microsoft [.NET 10 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/10.0), x64.
-- The four supported hologram material files must be stock before the first
-  installer run. The installer refuses unknown or previously modified bytes
-  instead of overwriting them.
+- Windows x64; the four original material streams must match the stock
+  SHA-256 hashes for Steam build `24735202` (Darktide `1.3.770.210`).
+  After a game update, any changed material falls back to its stock appearance.
 
 ## Installation
 
-1. Download the complete `BurningTertium.zip` release and extract the
-   **entire** archive into one folder.
-2. Close Darktide. Start `BurningTertium.Installer.exe` and select the
-   `Warhammer 40,000 DARKTIDE` folder if it was not found automatically.
-3. Choose **Install**. The installer verifies the build, executable, DML/DMF,
-   every stock input and every payload hash before changing anything, backs
-   up the originals, and adds `BurningTertium` to `mods/mod_load_order.txt`.
-4. Start Darktide and walk to the mission table in the Mourningstar.
+1. Download `BurningTertium.zip` from the latest GitHub release. Extract it
+   into the game's `mods` directory, so you have
+   `mods/BurningTertium/BurningTertium.mod`. Keep the entire `BurningTertium`
+   folder together, including `bin/`, `payload/` and `scripts/`.
+2. Add `BurningTertium` to `mods/mod_load_order.txt`, or install and enable the
+   ZIP with your mod manager. Start Darktide and visit the Mourningstar mission
+   table. No separate installer or .NET runtime is needed.
 
-Keep the installer DLLs and `payload/` beside the EXE. The release contains
-only the changed bytes (insert records); stock game data is copied from your
-own verified installation and is never redistributed.
+The redirect library checks each original material's SHA-256 before serving a
+replacement. The standalone mod does not change files under `bundle/`. The
+four full replacement materials and the Asset Redirect v2 library/DLL are
+included in the ZIP. Use `/asset_redirect` and the log to check redirect status.
+If a material reports `restart_required`, restart the game.
 
 ### In-game commands
 
@@ -51,36 +50,23 @@ own verified installation and is never redistributed.
 | `/bt_flames 1`–`20` | Fire on every N-th roof in the current mode |
 | `/bt_flames off` / `status` | Turn off / show count |
 
-### Repair, update and uninstall
+### Updating and uninstalling
 
-Close Darktide and run the **same release**. **Repair** restores missing or
-overwritten owned files. After a Darktide patch, **Repair after update**
-re-applies the release only if every managed file still matches a known stock
-or BurningTertium hash; otherwise it stops before writing and a new release is
-required. **Uninstall** restores the exact original materials from the
-backups, removes the mod folder and removes only its own load-order line.
-Backups and receipts live under `%LOCALAPPDATA%\BurningTertium\`.
-
-### Lua-only installation
-
-Copying only the `BurningTertium` mod folder (for example through a mod
-manager) gives the rooftop fire over the stock green hologram. The red
-hologram always requires the installer.
+If upgrading from an installer-based 1.0.x release, close the game and run
+that release's **Uninstall** first to restore its four original game files.
+Then install this ZIP as above. Back up any settings you want to keep before
+using the old uninstaller. For future updates, replace the
+`mods/BurningTertium` folder. To uninstall this version, remove its folder
+and its load-order entry.
+After a game update, the redirect library skips any material whose stock hash
+has changed; an updated mod is needed to restore that part of the red hologram.
+If a separate development trial changed the four `bundle/data` files, restore
+it with that trial's rollback before using this version.
 
 ## Compatibility
 
-The installer manages different files from RainbowFlame and RainbowBarrels
-(four `bundle/data` hologram material streams plus its own mod folder), and
-each installer edits only its own load-order line. RainbowBarrels recolours
-`liquid_area/fire_lingering` only while a real liquid area is being filled, so
-BurningTertium's rooftop effects are not recoloured by it.
-
-## Development
-
-`scripts/` is the DMF mod. `installer/` holds the installer, its tests and the
-payload generator (`tools/BurningTertium.PayloadGenerator`), which builds
-`payload/` from SHA-pinned stock backups and the in-game-tested outputs in the
-local, ignored `analysis/` tree. `resource/` contains the reproducible offline
-research and authoring scripts; [RESEARCH.md](RESEARCH.md) records the build,
-evidence, rejected approaches and test limits. See [LICENSE](LICENSE) and
-[NOTICE](NOTICE).
+The redirect owns four hologram material streams and does not edit them on
+disk. RainbowBarrels recolours `liquid_area/fire_lingering` only while a real
+liquid area is being filled, so BurningTertium's rooftop effects are not
+recoloured by it. See [LICENSE](LICENSE), [NOTICE](NOTICE) and
+[CHANGELOG.md](CHANGELOG.md).

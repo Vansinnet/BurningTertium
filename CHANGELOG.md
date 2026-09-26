@@ -2,6 +2,16 @@
 
 All notable release-facing changes to BurningTertium are documented here.
 
+## [1.1.0] - 2026-09-26
+
+### Changed
+
+- Install as a standalone DMF mod folder, including through a mod manager;
+  no separate executable installer or .NET runtime is required.
+- Serve the four red hologram materials through Asset Redirect v2 without
+  modifying game files on disk. Mismatched stock materials fall back to stock.
+- The user confirmed the new installation works in game.
+
 ## [1.0.1] - 2026-09-25
 
 ### Fixed

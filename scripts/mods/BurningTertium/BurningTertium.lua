@@ -1,5 +1,6 @@
 ---@class BurningTertiumMod : DMFMod
 local mod = get_mod("BurningTertium")
+local redirects = mod:io_dofile("BurningTertium/scripts/mods/BurningTertium/redirects")
 
 ---@type number[][]
 local roofs = mod:io_dofile("BurningTertium/scripts/mods/BurningTertium/roof_positions")
@@ -183,7 +184,18 @@ mod.on_game_state_changed = function(status, state_name)
     end
 end
 
-mod.on_unload = cleanup
+mod.on_all_mods_loaded = function()
+    if redirects then
+        redirects.commit()
+    end
+end
+
+mod.on_unload = function()
+    cleanup()
+    if redirects then
+        redirects.clear()
+    end
+end
 
 first_step = modes[mode][1].step
 

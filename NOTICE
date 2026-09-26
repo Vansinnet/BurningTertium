@@ -8,5 +8,10 @@ The Darktide Mod Framework (DMF) and Darktide Mod Loader (DML) are third-party
 community projects owned by their respective authors and contributors. Their
 licenses and terms apply separately.
 
+The standalone mod uses Asset Redirect v2 (asset_redirect.lua and
+asset-redirect.dll) from Wobin's Polychromatic project:
+https://github.com/Wobin/Polychromatic . These components remain the work of
+their respective authors and are not covered by BurningTertium's license.
+
 Vansinnet and BurningTertium are not affiliated with, endorsed by, sponsored by,
 or approved by Fatshark, Games Workshop, DMF, or DML.
