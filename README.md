@@ -72,7 +72,9 @@ it with that trial's rollback before using this version.
 ## Compatibility
 
 Reforge serves four hologram material streams and does not edit them on
-disk. Polychromatic, RainbowBarrels and RainbowFlame replace none of these
+disk. Version 1.2.0 was tested in game together with RainbowBarrels
+and RainbowFlame: `/reforge` reported the four materials active and the red
+hologram worked, with no errors. Polychromatic, RainbowBarrels and RainbowFlame replace none of these
 files, so they can be installed together. RainbowBarrels recolours `liquid_area/fire_lingering` only while a real
 liquid area is being filled, so BurningTertium's rooftop effects are not
 recoloured by it. See [LICENSE](LICENSE), [NOTICE](NOTICE) and
