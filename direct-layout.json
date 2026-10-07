@@ -1,0 +1,18 @@
+{
+  "modFolder": "BurningTertium",
+  "files": [
+    "BurningTertium.mod",
+    "info.json",
+    "bin/asset-redirect.dll",
+    "payload/redirect/bacd9b3be2a4c57f.btmat",
+    "payload/redirect/97b5490a85966a77.btmat",
+    "payload/redirect/51f7e0e66641669b.btmat",
+    "payload/redirect/59c4260bff372016.btmat",
+    "scripts/mods/BurningTertium/asset_redirect.lua",
+    "scripts/mods/BurningTertium/redirects.lua",
+    "scripts/mods/BurningTertium/BurningTertium.lua",
+    "scripts/mods/BurningTertium/BurningTertium_data.lua",
+    "scripts/mods/BurningTertium/BurningTertium_localization.lua",
+    "scripts/mods/BurningTertium/roof_positions.lua"
+  ]
+}
