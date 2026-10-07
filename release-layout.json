@@ -21,7 +21,6 @@
     ],
     "documentation": [
       { "source": "README.md", "destination": "BurningTertium/README.md" },
-      { "source": "CHANGELOG.md", "destination": "BurningTertium/CHANGELOG.md" },
       { "source": "NOTICE", "destination": "BurningTertium/NOTICE" }
     ],
     "licenses": [
