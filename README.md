@@ -78,4 +78,4 @@ hologram worked, with no errors. Polychromatic, RainbowBarrels and RainbowFlame 
 files, so they can be installed together. RainbowBarrels recolours `liquid_area/fire_lingering` only while a real
 liquid area is being filled, so BurningTertium's rooftop effects are not
 recoloured by it. See [LICENSE](LICENSE), [NOTICE](NOTICE) and
-[CHANGELOG.md](CHANGELOG.md).
+[the release notes](https://github.com/Vansinnet/BurningTertium/releases).
