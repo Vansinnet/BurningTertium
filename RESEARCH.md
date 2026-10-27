@@ -33,6 +33,9 @@ run is byte-identical; `reforge verify`: 4 of 4. In game the same day (1.13.3, h
 of the 18 release files): the log reported all four materials `active`, the user confirmed a red city,
 sides, base and grid with no green and fire on the roofs, and an Auspex screenshot at the mission
 table shows it (`tools/auspex/captures/screens/20261027-163335.png`).
+After the attested Reforge 0.1.0 DLL replaced the local build (0a00d03), the same check passed
+again after a game restart: four materials `active`, the user confirmed the red hologram and fire
+(`tools/auspex/captures/screens/20261027-164114.png`). Released as 1.2.1.
 
 ## Standalone redirect conversion — 2026-09-26
 
