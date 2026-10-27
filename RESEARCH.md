@@ -29,7 +29,10 @@ Evidence: run with `--stock <folder> --out <folder>` on the build-24735202 origi
 (`analysis/local-red-trial-20260923T203209Z-d11ff686/*.original`, named by stream hash), it
 reproduces the four 1.2.0 payload files byte for byte. On Darktide 1.13.3 it built
 `e7185456…` (bottom), `b32e79d7…` (side), `45ae0635…` (city) and `795653e0…` (grid); a second
-run is byte-identical; `reforge verify`: 4 of 4. In-game appearance on 1.13: pending.
+run is byte-identical; `reforge verify`: 4 of 4. In game the same day (1.13.3, hub, Vortex deploy
+of the 18 release files): the log reported all four materials `active`, the user confirmed a red city,
+sides, base and grid with no green and fire on the roofs, and an Auspex screenshot at the mission
+table shows it (`tools/auspex/captures/screens/20261027-163335.png`).
 
 ## Standalone redirect conversion — 2026-09-26
 
