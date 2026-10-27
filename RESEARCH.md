@@ -1,5 +1,36 @@
 # BurningTertium: Mourningstar table investigation
 
+## Rebuilding the materials after a game update — 2026-10-27
+
+Darktide 1.13.0 (2026-09-29) rebuilt all four hologram materials: material format 61 became
+62, `hologram_bottom` gained a scalar variable ahead of `base_color`, and every shader program
+was recompiled. Reforge refused all four redirects (`reforge verify`: 0 of 4), so 1.2.0 showed
+the stock green hologram from that patch on. The old authoring scripts were pinned to build
+`24735202` and needed modules that no longer exist (`parse_materials`, `dxc_api`), so they could
+not be rerun.
+
+`resource/rebuild_hologram.py` replaces them with one rerunnable step. After a patch that
+`reforge verify` reports, run from the workspace root (Windows, game installed):
+
+    python mods/active/BurningTertium/resource/rebuild_hologram.py
+    tools\reforge\reforge.cmd build mods\active\BurningTertium --game "<game folder>"
+
+It reads the stock streams from the game, recolours `base_color` (and the city's
+`material_variable_046f8451`) by name hash in the variable table, mirrors the city pixel
+program's two hardcoded green terms (frames 1 and 9, matched by their constant triples, not by
+SSA names), turns the grid's two colour programs red (frames 1/13 and 3/15), recompiles with
+DXC (tools/dxc, Microsoft's release; v1.9.2609 used here), checks that each no-op rebuild
+disassembles to the stock function and that the edit differs only as intended, repacks the
+frames as stored frames and pins the new stock hashes with `reforge add`. It stops on a new
+material version, moved pass slots or a changed instruction pattern; that needs a fresh look at
+the sections below. A report is written to `analysis/rebuild-<stock hashes>/report.json`.
+
+Evidence: run with `--stock <folder> --out <folder>` on the build-24735202 originals
+(`analysis/local-red-trial-20260923T203209Z-d11ff686/*.original`, named by stream hash), it
+reproduces the four 1.2.0 payload files byte for byte. On Darktide 1.13.3 it built
+`e7185456…` (bottom), `b32e79d7…` (side), `45ae0635…` (city) and `795653e0…` (grid); a second
+run is byte-identical; `reforge verify`: 4 of 4. In-game appearance on 1.13: pending.
+
 ## Standalone redirect conversion — 2026-09-26
 
 The direct-install layout follows the inspected Polychromatic 1.0.0 folder:

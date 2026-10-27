@@ -21,8 +21,9 @@ networking are untouched.
 
 - Darktide Mod Loader (DML) and Darktide Mod Framework (DMF).
 - Windows x64; the four original material streams must match the stock
-  SHA-256 hashes for Steam build `24735202` (Darktide `1.3.770.210`).
-  After a game update, any changed material falls back to its stock appearance.
+  SHA-256 hashes of Darktide 1.13 (rebuilt for patch 1.13.0 and checked
+  against 1.13.3). After a game update, any changed material falls back to
+  its stock appearance.
 
 ## Installation
 
